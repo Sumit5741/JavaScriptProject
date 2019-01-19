@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>  
+</head>
+<body>
+   <form action="" onsubmit='return validate()'>
+        name: <input type="text" name="name" id="name"> <br>
+        <span id="errname"></span><br>
+       email: <input type="email" name="E-mail" id="email" > <br/>
+       password: <input type="password" name="password" id="pass"> <br/>
+       <input type="submit" value="Submit" onclick="validate();"> 
+   </form>
+    <script type="text/javascript">
+        function validate()
+        {
+           var name=document.getElementById('name').value; 
+           var email=document.getElementById('email').value; 
+           var password=document.getElementById('pass').value; 
+           
+            var checkName=/^[a-zA-Z0-9].{3,16}$/;    
+            if(checkName.test(name))
+            {
+                alert('you have entered correct name');                
+            }
+            else
+            {
+                alert('Enter a valid Name');
+                
+                return false;
+            }
+        }
+    </script> 
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Sample Program</title>
+        <style>
+                .container { 
+                        height: 300px;
+                        position: relative;
+                        border: 0px solid white; 
+                    }  
+        </style>
+    </head>
+<body>
+    <div class='container'></div>
+<form action="welcome.html" method="post" align='center'>
+   <b style="color:darkseagreen">Email-id :</b><input type="text" id="email" placeholder="enter email-id" required/><br/> 
+   <p id="check_email"></p>
+   <b style="color:rgba(0, 0, 255, 0.664)">UserName:</b><input type="name" id='name' placeholder="enter name" pattern="(?=.*[a-z])(?=.*[A-Z]).{5,}" required /><br/>
+   <p id="check_UserName"></p>
+   <b style="color: darkcyan">Password :</b><input type="text" placeholder="enter password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[#%&$@!]).{8,}" required/><br/>
+   <p id="check_password"></p>
+   <input type="submit" value="Login"/>
+   <input type="reset" value="Reset"/><br/>	
+   <a href="resetpwd.html">Forgot Password</a><br/>
+   <a href="signup.html">Click Here To SignUp</a>
+</form>
+<script>
+    var email_check=document.getElementById('email');
+    var regEx="(?=.*[a-z])(?=.*[A-Z])\d\@(?=.*[a-z])(?=.*[A-Z])\.(?=.*[a-z])(?=.*[A-Z])"
+    if(email_check.test(regEx)){
+        document.getElementById('check_email').innerHTML="Email is in correct form";
+    }
+    else{
+    document.getElementById('check_email').innerHTML='enter password in correct from';
+    }
+</script>
+</body>
+</html>

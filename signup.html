@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Signup Page
+    </title>
+    <style>
+    .container 
+        { 
+            height: 300px;
+            position: relative;
+            border: 0px solid white; 
+        }  
+    </style>
+</head>
+<body>
+        <div class="container"></div>
+        <form action="login.html" method="post" align="center">
+        <h2 style="color:paleturquoise">Kindly Fill This Page</h2>
+        <!-- <b style="color:palegreen">FirstName:</b><input type="text" placeholder="FirstName" required/></br> -->
+        <!-- <b style="color:peachpuff">LastName :</b><input type="text" placeholder="LastName" required /></br> -->
+        <!-- <b style="color:peru">UserName :</b><input type="text" id='name' placeholder="FirstName" required></br> -->
+        <b style="color:burlywood">Email-id  :</b><input type="email" id="Email" placeholder="Email-id" required onkeyup='emailValidate();'/></br>
+        <b style="color:brown">Password :</b><input type="text" id="password" placeholder="new Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[#%&$@!]).{8,}" required/></br>
+        <b style="color:brown">Cnf pswd  :</b><input type="text" id="confirm_password" placeholder="Confirm Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[#%&$@!]).{8,}" required onkeyup='check_password()';/></br>
+        <p id='password_check'></p>
+        <input type="submit" id="submit" value="Signup" disabled/>
+        <input type="reset" value="Reset"/>
+        </form>
+    <script>
+    function check_password() {
+            if (document.getElementById('password').value ==document.getElementById('confirm_password').value) {
+                document.getElementById('submit').disabled=false;
+                document.getElementById('password_check').style="color:green";
+                document.getElementById('password_check').innerHTML="Password Matched!!"
+            } else {
+                document.getElementById('submit').disabled=true;
+                document.getElementById('password_check').style="color:red";
+                document.getElementById('password_check').innerHTML="Password didn't Matched!!"
+            }
+        } 
+    </script>   
+</body>
+</html>

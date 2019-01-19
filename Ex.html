@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Object Creations</title>
+      <!-- <script>
+      function person(college,branch)
+      {
+         this.college=college;
+         this.branch=branch;
+      }
+      </script> -->  
+   </head>         
+   <body>
+         <a href="http://example.com/file.zip">...</a>
+<a href="http://ya.ru">...</a>
+
+<script>
+  // can be any collection instead of document.body.children
+  for (let elem of document.body.children) {
+    if (elem.matches('a[href$="zip"]')) {
+      alert("The archive reference: " + elem.href );
+    }
+  }
+</script>
+         <!-- chatDiv.innerHTML += "<div>Hello<img src='smile.gif'/> !</div>";
+         chatDiv.innerHTML += "How goes?";
+         elem.innerHTML += "...";
+// is a shorter way to write:
+elem.innerHTML = elem.innerHTML + "..." --> -->
+<!--          
+          <body>
+
+            <script>
+              // for comment
+              alert( document.body.firstChild.tagName ); // undefined (no element)
+              alert( document.body.firstChild.nodeName ); // #comment
+          
+              // for document
+              alert( document.tagName ); // undefined (not element)
+              alert( document.nodeName ); // #document
+            </script>
+          </body>  -->
+            
+      <!-- <script>  
+      for (let node of document.body.childNodes) {
+  alert(node); // shows all nodes from the collection
+}
+      // var i=5;
+      // function fun(i)
+      // {
+      //    i--;
+      //    if(i>0)
+      //    {
+      //    console.log(i);
+      //    fun(i);
+      //    fun(i);
+      //    }
+      // }
+      // fun(i)
+        // "use script"
+      // var i=10;
+      // var i=20;
+      // console.log(i);
+      // var sumit=new person("BIET","CSE");
+      // var anu=new person("SJBIT","ISE");
+      // console.log(sumit.college);
+      // console.log('</br>')
+      // console.log(anu.branch);
+         // var javaScriptCourse={
+         //    topicName:"Objects",
+         //    price:500,
+         //    // description:"This is the description about the Javascript course."
+         //    fun:function(){
+         //       console.log(javaScriptCourse);
+         //       console.log(this.topicName +" "+ this.price);
+         //    }
+         // }
+         // javaScriptCourse.fun();
+         // // console.log(`${javaScriptCourse.description}`);
+         // // console.log(`this is the JavaScriptCourse on ${javaScriptCourse.topicName} and the price of this course is ${javaScriptCourse.price}..`);
+      </script>
+   </body>
+</html>

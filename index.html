@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action=login.html method="post">
+        New Password :<input type="text" placeholder="New Password" id="password" required/><br/>
+        Conf Password:<input type="text" placeholder="Confirm Password" id="confirm_password" required onkeyup='check_pass();'/>
+        <p id='pe'></p>
+        <input type="submit" name="submit"  value="registration"  id="submit"/>
+    </form>
+
+        <script>
+        function check_pass() {
+                if (document.getElementById('password').value==document.getElementById('confirm_password').value) {
+                            document.getElementById('pe').innerHTML="Password matched";
+                } else {
+                    document.getElementById('pe').innerHTML="password is not matching";
+                    return false;
+                }
+            }
+        </script>    
+</body>
+</html>

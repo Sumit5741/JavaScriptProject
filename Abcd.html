@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    Emailid: <input type="email" name="Email" placeholder="Enter the email-id" required onkeyup="AllowLock();"/>
+    <input type="submit" value="Submit"/>
+    <script>
+    function AllowLock(){
+    if (!locker.lock.value.match(/[a-zA-Z]$/) && locker.lock.value !="") {
+        locker.lock.value="";
+        alert("Please Enter only valid lock");
+    }
+    if(locker.lock.value.length > 5)
+        alert("max length exceeded");
+    } 
+    </script>
+</body>
+</html>

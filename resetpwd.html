@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <style>
+                .center 
+                    { 
+                        height: 300px;
+                        position: relative;
+                        border: 0px solid white; 
+                    }    
+                </style>
+</head>
+<body>
+    <div class='center'></div>
+    <form action=Passwordsuccess.html method="post" align='center'>
+        <h2 style="color:burlywood">Kindly Reset Your Password</h2>
+        New Password :<input type="text" placeholder="New Password" id="password" required/><br/>
+        Conf Password:<input type="text" placeholder="Confirm Password" id="confirm_password" required onkeyup='check_pass();'/><br/>
+        <input type="submit" name="submit"  value="registration"  id="submit" disabled/>
+    </form>
+
+        <script>
+        function check_pass() {
+                if (document.getElementById('password').value ==
+                        document.getElementById('confirm_password').value) {
+                    document.getElementById('submit').disabled=false;
+                } else {
+                    document.getElementById('submit').disabled=true;
+                }
+            }
+        </script>    
+</body>
+</html>
